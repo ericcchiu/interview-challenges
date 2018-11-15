@@ -21,6 +21,7 @@ const findPerson = (name, people) => {
 }
 
 const people = [ { "name": "Alice", "hobby": "programming" }, { "name": "Bob", "hobby": "gaming" } ];
+const group = [{"name": 'Carly', "hobby": "dancing"}, {"name": 'Dan', 'hobby': 'climbing'}]; 
 
 console.log(findPerson('Alice', people)); 
-console.log(findPerson('Alice', people)); 
+console.log(findPerson('Carl', group)); 
