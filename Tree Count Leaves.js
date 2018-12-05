@@ -4,7 +4,7 @@
 // traverse the tree, and return the number of leaf nodes the tree contains.
 
 
-// Time complexity: O(2^n)
+// Time complexity: Linear O(n)
 var Tree = function (value) {
   this.value = value;
   this.children = [];
