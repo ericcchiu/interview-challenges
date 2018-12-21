@@ -12,7 +12,6 @@ const calculate = (inputs) => {
 
   const stack = [];
   inputs = inputs.split(' ');
-  console.log(inputs);
 
   const evaluator = (operand1, operand2, operator) => {
     if (operator === '+') {
