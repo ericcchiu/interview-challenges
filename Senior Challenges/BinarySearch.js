@@ -1,20 +1,20 @@
 const binarySearch = (array, target) => {
   // Create initial, mid, and final indexes
-  let left = 0;
-  let right = array.length - 1;
-  let mid;
+  let start = 0;
+  let end = array.length - 1;
+  let midpoint;
 
   // While initial is less than equal to final
-  while (left <= right) {
+  while (start <= end) {
     // Start with the mid index
-    mid = Math.floor((left + right) / 2);
+    midpoint = Math.floor((start + end) / 2);
 
-    if (array[mid] === target) {
-      return mid;
-    } else if (array[mid] < target) {
-      left = mid + 1; // target found in second half
+    if (array[midpoint] === target) {
+      return midpoint;
+    } else if (array[midpoint] < target) {
+      start = midpoint + 1; // target found in second half
     } else {
-      right = mid - 1; // target found in first half
+      end = midpoint - 1; // target found in first half
     }
   }
 
