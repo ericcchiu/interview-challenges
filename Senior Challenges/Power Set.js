@@ -11,6 +11,7 @@ function powerSet(string) {
   for (let i = 0; i < uniqueSet.length; i++) {
     for (let substring in set) {
       const string = substring.concat(uniqueSet[i]).split('').sort().join('');
+      // store string as key inside the set 
       set[string] = true;
     }
   }

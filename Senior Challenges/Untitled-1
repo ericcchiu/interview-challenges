@@ -1,0 +1,13 @@
+function powerSet(string) { 
+  let uniqueSet = [... new Set(string)].sort().join(''); 
+
+  let set = {'': true};
+
+  for(let i = 0; i < uniqueSet; i++) { 
+    for (let substr in set) {
+      const string = substr.concat(uniqueSet[i]).split('').sort().join(''); 
+      set[string] = true; 
+    }
+  }
+  return Object.keys(set).sort();
+}
