@@ -9,8 +9,8 @@ const twoSum = (nums, target) => {
   let targetSumIndex = [];
   // Iterate over the nums array
   for (let i = 0; i < nums.length; i++) {
-    for (let j = 0; j < nums.length; j++) {
-      if (nums[j] === target - nums[i]) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[j] === Math.abs(target - nums[i])) {
         return targetSumIndex = [i, j];
       }
     }
@@ -20,4 +20,7 @@ const twoSum = (nums, target) => {
 const integerList = [2, 7, 11, 15];
 console.log(twoSum(integerList, 9));
 console.log(twoSum(integerList, 26));
-console.log(twoSum(integerList, 44));  
+console.log(twoSum(integerList, 44));
+
+const integerList1 = [3, 2, 4];
+console.log(twoSum(integerList1, 6));  
