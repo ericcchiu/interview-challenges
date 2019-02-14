@@ -1,30 +1,26 @@
 function sudokuCheck(boardStr) {
   let boardArr = boardStr.split('\n');
   let boardArrArr = [];
+
   for (let i = 0; i < 9; i++) {
     let column = [];
     let row = boardArr[i].split('');
     boardArrArr.push(row);
 
-    if (!numberCheck(row)) {
-      return 'invalid';
-    }
+    if (!numberCheck(row)) return 'invalid';
+
 
     for (let j = 0; j < 9; j++) {
       column.push(boardArr[j][i]);
     }
 
-    if (!numberCheck(column)) {
-      return 'invalid';
-    }
+    if (!numberCheck(column)) return 'invalid';
   }
   return boxCheck(boardArrArr);
 }
 
 function boxCheck(board) {
-  if (board.length < 1) {
-    return 'solved';
-  }
+  if (board.length < 1) return 'solved';
 
   let box = [];
 
@@ -34,9 +30,7 @@ function boxCheck(board) {
       board.splice(0, 3);
     }
   }
-  if (!numberCheck(box)) {
-    return 'invalid'
-  }
+  if (!numberCheck(box)) return 'invalid';
 
   return boxCheck(board);
 }
