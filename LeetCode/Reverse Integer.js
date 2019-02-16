@@ -6,7 +6,7 @@ const reverse = (x) => {
   return reversedNum;
 };
 
-console.log(reverse(1534236469));
+console.log(reverse(153423646900222));
 console.log(reverse(153));
 console.log(reverse(-153));
 
