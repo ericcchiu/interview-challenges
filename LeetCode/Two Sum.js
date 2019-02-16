@@ -10,8 +10,8 @@ const twoSum = (nums, target) => {
   // Iterate over the nums array
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[j] === Math.abs(target - nums[i])) {
-        return targetSumIndex = [i, j];
+      if (nums[j] === target - nums[i]) {
+        return targetSumIndice = [i, j];
       }
     }
   }
