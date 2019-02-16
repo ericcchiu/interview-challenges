@@ -6,9 +6,9 @@ backward as forward.
 const isPalindrome = x => {
   if (x < 0) return false;
   const reversedNum = x.toString().split('').reverse().join('');
-  if (x.toString() === reversedNum) return true;
+  return (x.toString() === reversedNum) ? true : false;
 
-  return false;
 };
 
 console.log(isPalindrome(121));
+console.log(isPalindrome(-121));
